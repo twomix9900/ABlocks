@@ -1,6 +1,5 @@
 # Installation
 Run "npm install" in public folder<br/>
-Run "ng build" in public folder<br/>
 Run "ng serve" to run the app<br/>
 Navigate to "localhost:4200" on a browser<br/>
 <br/>
