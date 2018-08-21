@@ -1,0 +1,23 @@
+<form (submit)=update()>
+  <div>
+    blockCount: <input type="text" [(ngModel)]="_newParams.blockCount" name="blockCount">
+  </div>
+  <div>
+    blocksPerRow: <input type="text" [(ngModel)]="_newParams.blocksPerRow" name="blocksPerRow">
+  </div>
+  <div>
+    <button type="submit">Update</button>
+  </div>
+</form>
+<div class="container">
+  <div>
+    <div class="row" *ngFor="let row of _world; let y = index;">
+        <div class="col" *ngFor="let col of _world[y]; let x = index;">
+          <div class="block" (click)="toggle(x, y)" *ngIf="_world[y][x] != 0">
+          </div>
+          <div class="block-alt" (click)="toggle(x, y)" *ngIf="_world[y][x] == 0">
+          </div>
+        </div>
+      </div>
+  </div>
+</div>
